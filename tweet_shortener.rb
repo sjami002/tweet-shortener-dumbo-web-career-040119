@@ -27,3 +27,19 @@ new_tweet = array.join(" ")
 puts new_tweet
 new_tweet
 end
+
+
+def bulk_tweet_shortener(tweet)
+  tweet.each do |word|
+    word_substituter(word)
+  end
+end
+
+
+def selective_tweet_shortener(tweet)
+  if tweet > 140
+    word_substituter(tweet)
+  else
+    tweet
+  end
+end
